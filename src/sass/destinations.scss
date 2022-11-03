@@ -8,7 +8,6 @@
 
 .descriptions {
     margin-right: toRem(386px);
-    //max-width: toRem(13526px);
 
     &__hd2 {
         height: toRem(105px);
@@ -90,7 +89,6 @@
                 width: toRem(24px);
                 height: toRem(24px);
                 left: toRem(-43px);
-                //background-size: 24px;
                 color: $primary-font-color;
             }
         }

@@ -1,0 +1,45 @@
+@import "variables";
+@import "helpers";
+
+.planners{
+    min-height: 100vh;
+    padding-bottom: toRem(140px);
+    box-sizing: border-box;
+    max-width: toRem(1738px);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.trip{
+    width: 100%;
+    max-width: toRem(394px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__hd3{}
+    &__text{}
+    &__btn{}
+}
+
+.entirety{
+    width: 100%;
+    max-width: toRem(1244px);
+    margin-top: toRem(140px);
+    //margin-left: toRem(100px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    &__img{}
+    .img-content{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .price-title{}
+    .price-text{}
+    .price-day{}
+}

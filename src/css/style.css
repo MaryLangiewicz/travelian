@@ -797,27 +797,90 @@ html, body {
   font-size: 16px;
 }
 
+.entirety .img-content .tour-day__day, .entirety .img-content .title-price, .trip__btn, .trip__text {
+  font-family: "Rubik", serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
 .planners {
   min-height: 100vh;
+  padding-top: 8.75rem;
   padding-bottom: 8.75rem;
-  box-sizing: border-box;
-  max-width: 108.625rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .trip {
   width: 100%;
   max-width: 24.625rem;
+  margin-left: 11.375rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
+.trip__hd3 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1.32;
+  color: #172432;
+  position: relative;
+}
+.trip__hd3::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 14.4375rem;
+  height: 0.1875rem;
+  bottom: -1.25rem;
+  background-color: #FF7757;
+}
+.trip__text {
+  line-height: 1.16;
+  margin-top: 3.25rem;
+  margin-bottom: 3.125rem;
+  color: #767E86;
+}
+.trip__btn {
+  line-height: 1.16;
+  padding: 1.25rem;
+  color: #FFF;
+  background: #FF7757;
+  border: 0;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  position: relative;
+}
+.trip__btn::before {
+  content: "";
+  position: absolute;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  left: -0.875rem;
+  top: -0.90625rem;
+  z-index: -3;
+  background: #172432;
+}
+.trip__btn::after {
+  content: "";
+  position: absolute;
+  width: 2.6875rem;
+  height: 2.6875rem;
+  right: -18px;
+  bottom: -16px;
+  z-index: -2;
+  background: #767E86;
+}
+
 .entirety {
   width: 100%;
-  max-width: 77.75rem;
-  margin-top: 8.75rem;
+  max-width: 77.5rem;
+  margin-left: 6.25rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -825,9 +888,57 @@ html, body {
   box-sizing: border-box;
 }
 .entirety .img-content {
+  margin-top: 0;
+  max-width: 18.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  box-sizing: border-box;
+}
+.entirety .img-content .title-price {
+  line-height: 1.16;
+  text-transform: uppercase;
+  color: #172432;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 1.25rem;
+}
+.entirety .img-content .title-price__price {
+  margin: 0;
+}
+.entirety .img-content .tour-day {
+  width: 100%;
+  margin: 0.75rem 0 1.4375rem;
+  display: flex;
+  justify-content: space-between;
+}
+.entirety .img-content .tour-day__text {
+  margin-top: 0;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.75rem;
+  line-height: 1.32;
+  color: #172432;
+  position: relative;
+}
+.entirety .img-content .tour-day__text::before {
+  content: "";
+  position: absolute;
+  background-image: url("../images/specification_rating.svg");
+  width: 8.5rem;
+  height: 1.5rem;
+  bottom: -1.9375rem;
+  left: -0.0625rem;
+}
+.entirety .img-content .tour-day__day {
+  line-height: 1.16;
+  color: #172432;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */

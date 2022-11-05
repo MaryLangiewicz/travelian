@@ -471,11 +471,18 @@ html, body {
 
 .destinations {
   min-height: 100vh;
-  padding: 1.625rem 0 8.75rem 11.375rem;
+  margin-top: -7.875rem;
+  padding-top: 8.75rem;
+  padding-bottom: 8.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .descriptions {
-  margin-right: 24.125rem;
+  width: 100%;
+  max-width: 97.25rem;
 }
 .descriptions__hd2 {
   height: 6.5625rem;
@@ -512,6 +519,7 @@ html, body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   max-width: 97.25rem;
   margin-top: 6.25rem;
 }

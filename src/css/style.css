@@ -642,19 +642,41 @@ html, body {
   width: 100%;
   max-width: 97.25rem;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  box-sizing: border-box;
+}
+@media only screen and (max-width: 1540px) {
+  .specification {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }
 
 .totality {
+  width: 100%;
+  max-width: 31.0625rem;
   margin-right: 2rem;
+}
+@media only screen and (max-width: 1540px) {
+  .totality {
+    margin-bottom: 0.9375rem;
+  }
+}
+.totality:last-child {
+  margin-right: 0;
+}
+.totality > img {
+  width: 100%;
+  max-width: 31.0625rem;
 }
 .totality__container {
   padding: 40px 24px;
 }
 
 .text-box {
+  width: 100%;
+  max-width: 31.0625rem;
   align-items: flex-start;
   background: #FFF8F1;
   border-radius: 0 0 1.625rem 1.625rem;

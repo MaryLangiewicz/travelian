@@ -55,13 +55,31 @@
     width: 100%;
     max-width: toRem(1556px);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    box-sizing: border-box;
+    @media only screen and (max-width: 1540px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
 }
 
 .totality {
+    width: 100%;
+    max-width: toRem(497px);
     margin-right: toRem(32px);
+    @media only screen and (max-width: 1540px) {
+        margin-bottom: toRem(15px);
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    & > img {
+        width: 100%;
+        max-width: toRem(497px);
+    }
 
     &__container {
         padding: 40px 24px;
@@ -69,6 +87,8 @@
 }
 
 .text-box {
+    width: 100%;
+    max-width: toRem(497px);
     align-items: flex-start;
     background: #FFF8F1;
     border-radius: 0 0 toRem(26px) toRem(26px);

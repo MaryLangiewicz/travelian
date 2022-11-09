@@ -1,5 +1,6 @@
-@import "variables";
-@import "helpers";
+@import "../variables";
+@import "../utils/helpers";
+@import "../media-queries.scss";
 
 .destinations {
     min-height: 100vh;
@@ -10,15 +11,23 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-
+    @media screen and (max-width: 1400px) {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 }
 
 .descriptions {
-    width: 100%;
-    max-width: toRem(1556px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
 
     &__hd2 {
-        height: toRem(105px);
+        width: 100%;
+        max-width: toRem(1352px);
+        min-height: toRem(105px);
         font-family: "Playfair Display", serif;
         font-weight: 400;
         font-size: toRem(64px);
@@ -34,7 +43,8 @@
             position: absolute;
             bottom: toRem(-2px);
             left: toRem(-1px);
-            width: toRem(365px);
+            width: 100%;
+            max-width: toRem(365px);
             height: toRem(3px);
             display: block;
             background-color: $primary-color;
@@ -55,27 +65,39 @@
 .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
     max-width: toRem(1556px);
     margin-top: toRem(100px);
+
+    @include mq(lg) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: toRem(100px);
+    }
 }
 
 .group {
     margin-right: toRem(32px);
     position: relative;
 
-    &__img {
+
+    & > img {
+        width: 100%;
+        max-width: toRem(497px);
+        @include mq(xxl) {
+            margin-bottom: toRem(10px);
+        }
     }
 
     &__desc {
+        position: absolute;
         color: $primary-font-color;
         font-family: 'Playfair Display', serif;
         font-weight: 400;
         font-size: toRem(28px);
         line-height: 1.32;
-        position: absolute;
         bottom: toRem(40px);
         left: toRem(24px);
 
@@ -95,10 +117,14 @@
             position: absolute;
             background-image: url("#{$imgs-path}/destinations_location.svg");
             display: inline-block;
-            width: toRem(24px);
+            max-width: toRem(24px);
             height: toRem(24px);
             left: toRem(-43px);
             color: $primary-font-color;
+            bottom: toRem(40px);
+
         }
+
     }
 }
+

@@ -1,4 +1,11 @@
 @import "normalize";
 
-@import "intro";
-@import "destinations";
+@import "./components/intro";
+@import "./components/destinations";
+@import "./components/specification";
+@import "./components/blog";
+@import "./components/planners";
+@import "./components/gallery";
+@import "./components/testimonial";
+@import "./components/newsletter";
+@import "./components/footer";

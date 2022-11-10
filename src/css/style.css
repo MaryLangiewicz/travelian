@@ -996,8 +996,15 @@ html, body {
   align-items: center;
   box-sizing: border-box;
 }
-.pictures__img--higher {
-  margin-bottom: 5rem;
+@media screen and (max-width: 1475px) {
+  .pictures {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.pictures__img--higher:hover {
+  transform: translateY(-80px);
 }
 
 /*# sourceMappingURL=style.css.map */

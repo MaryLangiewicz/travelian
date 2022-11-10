@@ -55,7 +55,13 @@
     align-items: center;
     box-sizing: border-box;
 
-    &__img--higher {
-        margin-bottom: toRem(80px);
+    @media screen and (max-width: 1475px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__img--higher:hover {
+        transform: translateY(-80px);
     }
 }

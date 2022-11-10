@@ -808,19 +808,35 @@ html, body {
   padding-top: 8.75rem;
   padding-bottom: 8.75rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   box-sizing: border-box;
+}
+@media screen and (max-width: 664px) {
+  .planners {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1519px) {
+  .planners {
+    justify-content: center;
+  }
 }
 
 .trip {
   width: 100%;
   max-width: 24.625rem;
-  margin-left: 11.375rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+@media screen and (max-width: 664px) {
+  .trip {
+    margin-bottom: 3.125rem;
+    justify-content: center;
+  }
 }
 .trip__hd3 {
   font-family: "Playfair Display", serif;
@@ -835,8 +851,8 @@ html, body {
   content: "";
   position: absolute;
   display: block;
-  width: 14.4375rem;
-  height: 0.1875rem;
+  max-width: 14.4375rem;
+  min-height: 0.1875rem;
   bottom: -1.25rem;
   background-color: #FF7757;
 }
@@ -879,7 +895,7 @@ html, body {
 
 .entirety {
   width: 100%;
-  max-width: 77.5rem;
+  max-width: 77.75rem;
   margin-left: 6.25rem;
   display: flex;
   flex-direction: row;
@@ -887,9 +903,28 @@ html, body {
   align-items: center;
   box-sizing: border-box;
 }
+@media screen and (max-width: 1519px) {
+  .entirety {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 664px) {
+  .entirety {
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1519px) {
+  .entirety .entirety__img {
+    margin-bottom: 1.25rem;
+  }
+}
 .entirety .img-content {
   margin-top: 0;
-  max-width: 18.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
